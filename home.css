@@ -1,0 +1,336 @@
+/* ===== HOME PAGE SPECIFIC STYLES ===== */
+.home-container {
+    min-height: auto;
+    margin-top: 80px; /* Space for fixed navbar */
+    margin-bottom: 80px; /* Space for footer */
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.back-to-top i {
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+.main-nav {
+    background-color: var(--dark-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.nav-logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.95em;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover:after,
+.nav-links a.active:after {
+    width: 100%;
+}
+
+.contact-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 8px 15px !important;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.contact-btn:after {
+    display: none;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 1.2em;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+/* Projects Section */
+.projects {
+    margin-bottom: 40px;
+    border-left: 2px solid var(--border-color);
+    padding-left: 30px;
+}
+
+.project-card {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.project-header h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--dark-blue);
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85em;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.project-links a i {
+    margin-right: 5px;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+.project-desc {
+    color: var(--light-text-color);
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: var(--dark-blue);
+    color: white;
+    font-size: 0.8em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* GitHub Stats Section */
+.github-stats {
+    border-left: 2px solid var(--border-color);
+    padding-left: 30px;
+}
+
+.github-widget {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.github-chart {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.github-metrics {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-value {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.metric-label {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+}
+
+/* Social Links */
+.social-links .fa-brands,
+.social-links .fa-solid {
+    width: 16px;
+    margin-right: 12px;
+    color: var(--dark-blue);
+    text-align: center;
+}
+
+/* Responsive adjustments for the home page */
+@media (max-width: 768px) {
+    .home-container {
+        margin-top: 60px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .project-header {
+        flex-direction: column;
+    }
+    
+    .project-links {
+        margin-top: 10px;
+    }
+    
+    .github-metrics {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .metric {
+        flex: 1 0 30%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+} 
